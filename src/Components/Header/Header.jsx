@@ -4,21 +4,32 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <header
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-20">
 
-          <div className="flex-shrink-0">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="200"
+            className="flex-shrink-0"
+          >
             <h1 className="text-xl font-serif font-bold tracking-[0.3em] text-gray-900 uppercase cursor-pointer hover:text-pink-400 transition duration-500">
-              Luxury Line  Perfumes
+              Luxury Line Perfumes
             </h1>
-            
           </div>
-
           <nav className="hidden md:block">
             <ul className="flex space-x-10 font-medium text-gray-600 tracking-wide">
               {["Home", "About us", "Our Brands", "Contacts"].map((item, i) => (
-                <li key={i} className="relative group cursor-pointer">
+                <li
+                  key={i}
+                  data-aos="fade-down"
+                  data-aos-delay={300 + i * 100}
+                  className="relative group cursor-pointer"
+                >
                   <a className="transition duration-300 group-hover:text-pink-400">
                     {item}
                   </a>
@@ -29,7 +40,6 @@ const Header = () => {
             </ul>
           </nav>
 
-         
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -63,6 +73,8 @@ const Header = () => {
       </div>
 
       <div
+        data-aos="fade-up"
+        data-aos-duration="800"
         className={`${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         } md:hidden overflow-hidden transition-all duration-500 bg-white shadow-lg`}
