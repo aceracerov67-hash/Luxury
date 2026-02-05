@@ -1,5 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Video from "./Video";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import brand1 from '../../assets/brand1.png'
+import brand2 from '../../assets/brand2.png'
+import brand3 from '../../assets/brand3.png'
+import brand4 from '../../assets/brand4.png'
+import brand5 from '../../assets/brand5.png'
 
 const slides = [
   {
@@ -274,6 +284,212 @@ const Hero = () => {
 
   </div>
 </section>
+
+<div className="max-w-3xl mx-auto mt-16 space-y-6 px-4">
+
+  <h1 className="text-3xl md:text-4xl font-bold text-gray-900 text-center tracking-wide">
+    FREQUENTLY ASKED QUESTIONS
+  </h1>
+
+  <p className="text-center text-gray-500 text-base md:text-lg max-w-xl mx-auto">
+    Learn more about our enchanting fragrances
+  </p>
+
+  <div className="space-y-4 mt-8">
+
+    <Accordion className="rounded-xl shadow-md before:hidden">
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon className="text-orange-500" />}
+        className="bg-gray-100 hover:bg-gray-200 rounded-xl px-6"
+      >
+        <Typography className="font-semibold text-lg text-gray-800">
+          What ingredients are used in our fragrances?
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails className="px-6 pb-6">
+        <Typography className="text-gray-600 leading-relaxed">
+          We use a blend of natural and synthetic ingredients. Our fragrances feature essential oils, floral extracts, and carefully crafted synthetic compounds to create unique and lasting scents.
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
+
+
+            <Accordion className="rounded-xl shadow-md before:hidden">
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon className="text-orange-500" />}
+          className="bg-gray-100 hover:bg-gray-200 rounded-xl px-6"
+        >
+          <Typography className="font-semibold text-lg text-gray-800">
+            How do our fragrances evoke emotions?
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails className="px-6 pb-6">
+          <Typography className="text-gray-600 leading-relaxed">
+            Each fragrance is crafted to evoke specific emotions. We combine top, middle, and base notes to create complex scents that can trigger feelings of relaxation, happiness, nostalgia, and even passion. For example, lavender is known for its calming properties, while citrus notes can uplift and energize.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion className="rounded-xl shadow-md before:hidden">
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon className="text-orange-500" />}
+          className="bg-gray-100 hover:bg-gray-200 rounded-xl px-6"
+        >
+          <Typography className="font-semibold text-lg text-gray-800">
+            What is the inspiration behind our signature scents?
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails className="px-6 pb-6">
+          <Typography className="text-gray-600 leading-relaxed">
+            Our signature scents are inspired by nature and memories. We draw inspiration from lush gardens, tropical beaches, and serene forests to create fragrances that transport you to your favorite places. Additionally, we aim to capture the essence of unforgettable moments, making each scent a unique journey.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion className="rounded-xl shadow-md before:hidden">
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon className="text-orange-500" />}
+          className="bg-gray-100 hover:bg-gray-200 rounded-xl px-6"
+        >
+          <Typography className="font-semibold text-lg text-gray-800">
+            How can I choose the right fragrance for me?
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails className="px-6 pb-6">
+          <Typography className="text-gray-600 leading-relaxed">
+            Choosing the right fragrance is a personal journey. Consider the occasions you will wear it for, your personality, and the emotions you want to evoke. Sampling different scents can help you find one that resonates with you. Our experts are always available to provide personalized recommendations based on your preferences.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion className="rounded-xl shadow-md before:hidden">
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon className="text-orange-500" />}
+          className="bg-gray-100 hover:bg-gray-200 rounded-xl px-6"
+        >
+          <Typography className="font-semibold text-lg text-gray-800">
+            
+How long do your fragrances last?
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails className="px-6 pb-6">
+          <Typography className="text-gray-600 leading-relaxed">
+            Our fragrances are designed to last throughout the day. The longevity of a fragrance depends on its concentration and the individual's skin chemistry. We offer a range of concentrations, from Eau de Toilette to Parfum, to suit your preferences. For longer-lasting scent, apply to pulse points and moisturize your skin before application.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+  </div>
+</div>
+
+<section className="py-24">
+  <div className="max-w-6xl mx-auto px-4">
+
+    <div className="text-center mb-14">
+      <h1 className="text-4xl font-extrabold text-gray-900 tracking-wide">
+        Our Brands
+      </h1>
+      <p className="mt-4 text-gray-500 text-lg">
+        Meet our famous brands
+      </p>
+    </div>
+
+   
+    <ul className="flex justify-center gap-10 mb-10">
+      <li className="group relative w-76 h-46 bg-white rounded-2xl 
+                     flex items-center justify-center
+                     shadow-md transition-all duration-300
+                     hover:-translate-y-2 hover:shadow-2xl">
+
+        <span className="absolute inset-0 rounded-2xl 
+                         bg-orange-400/20 blur-xl opacity-0 
+                         group-hover:opacity-100 transition"></span>
+
+        <img
+          src={brand1}
+          alt="Brand 1"
+          className="relative h-39 object-contain 
+                     grayscale group-hover:grayscale-0 
+                     transition duration-300"
+        />
+      </li>
+
+      <li className="group relative w-76 h-46 bg-white rounded-2xl 
+                     flex items-center justify-center
+                     shadow-md transition-all duration-300
+                     hover:-translate-y-2 hover:shadow-2xl">
+
+        <span className="absolute inset-0 rounded-2xl 
+                         bg-orange-400/20 blur-xl opacity-0 
+                         group-hover:opacity-100 transition"></span>
+
+        <img
+          src={brand2}
+          alt="Brand 2"
+          className="relative h-39 object-contain 
+                     grayscale group-hover:grayscale-0 
+                     transition duration-300"
+        />
+      </li>
+
+      <li className="group relative w-76 h-46 bg-white rounded-2xl 
+                     flex items-center justify-center
+                     shadow-md transition-all duration-300
+                     hover:-translate-y-2 hover:shadow-2xl">
+
+        <span className="absolute inset-0 rounded-2xl 
+                         bg-orange-400/20 blur-xl opacity-0 
+                         group-hover:opacity-100 transition"></span>
+
+        <img
+          src={brand3}
+          alt="Brand 3"
+          className="relative h-39 object-contain 
+                     grayscale group-hover:grayscale-0 
+                     transition duration-300"
+        />
+      </li>
+    </ul>
+
+   
+    <ul className="flex justify-center gap-10">
+      <li className="group relative w-76 h-46 bg-white rounded-2xl 
+                     flex items-center justify-center
+                     shadow-md transition-all duration-300
+                     hover:-translate-y-2 hover:shadow-2xl">
+
+        <span className="absolute inset-0 rounded-2xl 
+                         bg-orange-400/20 blur-xl opacity-0 
+                         group-hover:opacity-100 transition"></span>
+
+        <img
+          src={brand4}
+          alt="Brand 4"
+          className="relative h-39 object-contain 
+                     grayscale group-hover:grayscale-0 
+                     transition duration-300"
+        />
+      </li>
+
+      <li className="group relative w-76 h-46 bg-white rounded-2xl 
+                     flex items-center justify-center
+                     shadow-md transition-all duration-300
+                     hover:-translate-y-2 hover:shadow-2xl">
+
+        <span className="absolute inset-0 rounded-2xl 
+                         bg-orange-400/20 blur-xl opacity-0 
+                         group-hover:opacity-100 transition"></span>
+
+        <img
+          src={brand5}
+          alt="Brand 5"
+          className="relative h-39 object-contain 
+                     grayscale group-hover:grayscale-0 
+                     transition duration-300"
+        />
+      </li>
+    </ul>
+
+  </div>
+</section>
+
 
 
     </>
