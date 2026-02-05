@@ -5,6 +5,7 @@ const Header = () => {
 
   return (
     <header
+    id="Home"
       data-aos="fade-down"
       data-aos-duration="1000"
       className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100"
@@ -22,23 +23,30 @@ const Header = () => {
             </h1>
           </div>
           <nav className="hidden md:block">
-            <ul className="flex space-x-10 font-medium text-gray-600 tracking-wide">
-              {["Home", "About us", "Our Brands", "Contacts"].map((item, i) => (
-                <li
-                  key={i}
-                  data-aos="fade-down"
-                  data-aos-delay={300 + i * 100}
-                  className="relative group cursor-pointer"
-                >
-                  <a className="transition duration-300 group-hover:text-pink-400">
-                    {item}
-                  </a>
+  <ul className="flex space-x-10 font-medium text-gray-600 tracking-wide">
+    {[
+      { name: "Home", link: "#home" },
+      { name: "About us", link: "#about" },
+      { name: "Our Brands", link: "#brands" },
+      { name: "Contacts", link: "#contact" },
+    ].map((item, i) => (
+      <li
+        key={i}
+        className="relative group cursor-pointer"
+      >
+        <a
+          href={item.link}
+          className="transition duration-300 group-hover:text-pink-400"
+        >
+          {item.name}
+        </a>
 
-                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-pink-400 transition-all duration-500 group-hover:w-full"></span>
-                </li>
-              ))}
-            </ul>
-          </nav>
+        <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-pink-400 transition-all duration-500 group-hover:w-full"></span>
+      </li>
+    ))}
+  </ul>
+</nav>
+
 
           <div className="md:hidden flex items-center">
             <button

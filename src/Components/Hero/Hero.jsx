@@ -114,7 +114,7 @@ const Hero = () => {
 </section>
 
 
-     <section className="py-24">
+     <section id="about" className="py-24">
   <div className="max-w-7xl mx-auto px-6">
     <div className="grid md:grid-cols-2 gap-16 items-center">
 
@@ -536,7 +536,7 @@ const Hero = () => {
 </section>
 
 
-<section className="py-24">
+<section id="brands" className="py-24">
   <div className="max-w-6xl mx-auto px-4">
 
     <div
@@ -761,7 +761,7 @@ const Hero = () => {
       <Zapros/>
     </div>
 
-  <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+  <section  className="py-24 bg-gradient-to-b from-white to-gray-50">
   <div className="max-w-4xl mx-auto px-6 text-center">
 
     <h2
